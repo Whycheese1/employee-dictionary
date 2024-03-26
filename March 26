@@ -1,0 +1,50 @@
+###########################
+#Employee Dictionary
+#Name : Jarrett Sanderson
+#Date : March 21 2024
+#Task: Complete functions with the provided info
+###########################
+
+import easygui as easy
+
+#Create a nest dictionary / dictionary inside a list
+employee = [{'Name':'Slater' ,'job':'teacher', 'location':'CCHS' ,'start_date':2018},
+          {'Name':'Tomporowski' ,'job':'teacher' ,'location':'CCHS' ,'start_date':2000}
+]
+
+def add_employee():
+    #Get job info: name,job,location,start_date 
+    #Create local dictionary
+    #Add to global dictionary
+    
+    newname = input("what is the Employee's name?: ")
+    jobtitle = input("what is the Employee's job?: ")
+    joblocation = input("where does the Employee work?: ")
+    yearstarted = input("when did the Employee start working?: ")
+    
+    employee.append({'Name':newname ,'job':jobtitle ,'location':joblocation ,'start_date':yearstarted})
+    
+    
+def print_employee():
+    #Print all NAMES from global dictionary
+    for person in employee:
+        print(person['Name'])
+
+
+def job_location_pairs():
+    #Print out ALL jobs and their locations
+    for person in employee:
+        var = f"they work as a {person['job']} at {person['location']}"
+        print(var)
+     
+def possible_raise():
+    #If employee started prior to 2020,
+    #eligible for a raise, print out data
+    #for individual
+    for person in employee:
+        var2 = f"{person['start_date']} < 2024"
+        print(var2, "deserves a raise in my opinion")
+    
+    
+    
+    
